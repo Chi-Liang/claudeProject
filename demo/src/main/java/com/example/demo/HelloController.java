@@ -14,7 +14,7 @@ public class HelloController {
 
     @GetMapping("/hi")
     public String hello() {
-        return "Hello Claude!!!";
+        return "Hello Claude!!!!!!";
     }
 
     @GetMapping(value = "/image", produces = MediaType.IMAGE_PNG_VALUE)

@@ -28,19 +28,22 @@ git branch -M main
 
 詢問使用者這次變更的原因（commit message），等待回覆後再繼續。
 
-**步驟 5：提交並推送**
+**步驟 5：提交並推送（必須在同一道指令執行，不可拆開）**
+
+commit 與 push 合併為單一指令，確保提交後立即推送到遠端：
 
 ```
-git commit -m "<使用者提供的訊息>"
-git push origin main
+git commit -m "<使用者提供的訊息>"; git push origin main
 ```
 
-推送完成後，顯示 `git log --oneline -5` 確認最新提交已在遠端。
+若推送失敗（遠端有新提交），執行：
+```
+git pull --rebase origin main; git push origin main
+```
 
-**若推送失敗（遠端有新提交）：**
-先執行 `git pull --rebase origin main`，解決衝突後再推送。
+推送成功後，執行 `git log --oneline -5` 確認最新提交已在遠端。
 
 **部署完成後，回報：**
 - 本次提交的 commit hash
-- 推送是否成功
+- 推送結果（成功 / 失敗原因）
 - 倉庫連結：https://github.com/Chi-Liang/claudeProject
