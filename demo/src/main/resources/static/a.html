@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <label for="nameInput">Name:</label>
+    <input type="text" id="nameInput" name="name" placeholder="Enter your name">
+</div>
+
+<div>
+    <p>Choose an option:</p>
+    <label><input type="radio" name="option" value="option1" checked> Option 1</label>
+    <label><input type="radio" name="option" value="option2"> Option 2</label>
+    <label><input type="radio" name="option" value="option3"> Option 3</label>
+</div>
+
+<div>
+    <button type="button" onclick="alert('Hello ' + document.getElementById('nameInput').value)">Submit</button>
+</div>
+
+</body>
+</html>
