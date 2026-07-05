@@ -2,24 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>簡單表單頁面</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            padding-top: 60px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 32px 40px;
+            width: 320px;
+        }
+        .card h1 {
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 24px;
+            color: #333;
+        }
+        .field {
+            margin-bottom: 20px;
+        }
+        .field label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #444;
+        }
+        .field input[type="text"] {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        .options label {
+            display: block;
+            font-weight: normal;
+            margin-bottom: 8px;
+            color: #444;
+            cursor: pointer;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4a90e2;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #3b7dc4;
+        }
+    </style>
 </head>
 <body>
 
-<div>
-    <label for="nameInput">Name:</label>
-    <input type="text" id="nameInput" name="name" placeholder="Enter your name">
-</div>
+<div class="card">
+    <h1>簡單表單頁面</h1>
 
-<div>
-    <p>Choose an option:</p>
-    <label><input type="radio" name="option" value="option1" checked> Option 1</label>
-    <label><input type="radio" name="option" value="option2"> Option 2</label>
-    <label><input type="radio" name="option" value="option3"> Option 3</label>
-</div>
+    <div class="field">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" name="name" placeholder="Enter your name">
+    </div>
 
-<div>
-    <button type="button" onclick="alert('Hello ' + document.getElementById('nameInput').value)">Submit</button>
+    <div class="field options">
+        <p>Choose an option:</p>
+        <label><input type="radio" name="option" value="option1" checked> Option 1</label>
+        <label><input type="radio" name="option" value="option2"> Option 2</label>
+        <label><input type="radio" name="option" value="option3"> Option 3</label>
+    </div>
+
+    <div>
+        <button type="button" onclick="alert('Hello ' + document.getElementById('nameInput').value)">Submit</button>
+    </div>
 </div>
 
 </body>
